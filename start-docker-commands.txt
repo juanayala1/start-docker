@@ -1,0 +1,26 @@
+docker run hello-world
+docker pull busybox
+docker images
+docker run busybox echo "hello XD"
+docker ps -- lista todos los contenedores en ejecución.
+docker ps -a -- lista contenedores que hemos ejecutado
+docker run -it busybox sh habialitar ejecución de mas de un comando dentro del contenedor.
+docker run --help información de comandos docker run
+docker rm $(docker ps -a -q -f status=exited) -  elimina todos los contenedores que tienen un estado de exited
+docker run --rm -it prakhar1989/static-site  -- ejecuta/descarga la imagen prakhar1989/static-site, la --rmbandera elimina automáticamente el contenedor cuando sale y la -itbandera especifica un terminal interactivo que facilita eliminar el contenedor con Ctrl+C (en Windows).
+docker run -d -P --name static-site prakhar1989/static-site -- -desconectaremos nuestro terminal, -Ppublicaremos todos los puertos expuestos a puertos aleatorios y finalmente --namecorresponderá a un nombre que queremos darle.
+docker port static-site -- ver puertos que usa static-site
+docker run -p 8888:80 prakhar1989/static-site -- ejecutar imagen docker en puerto 8888 http.
+docker stop static-site -- detener contenedor.
+..............
+Ver lista de imagenes disponibles en docker:
+docker search
+-............
+docker build: Crear una nueva imagen a partir de un archivo Dockerfile
+    docker build -t juanayalaclabs/catnip .
+.............
+Publicar una imagen en docker hub:
+docker login --- ingresar username y password
+docker push nombre de la imagen. --> juanayalaclabs/catnip
+
+
