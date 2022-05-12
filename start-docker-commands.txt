@@ -23,4 +23,8 @@ Publicar una imagen en docker hub:
 docker login --- ingresar username y password
 docker push nombre de la imagen. --> juanayalaclabs/catnip
 
+..Ruta donde se encuentra publicada imagen docker en aws:
+http://dockercats-env.eba-phpjivpy.us-east-1.elasticbeanstalk.com/
+
+
 
